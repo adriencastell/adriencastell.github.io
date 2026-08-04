@@ -73,3 +73,54 @@ function cambiarCapitulo(numCap) {
     document.getElementById(`cap-${numCap}`).classList.add('active');
     event.currentTarget.classList.add('active');
 }
+
+
+// Función genérica para manejar cualquier formulario con Web3Forms
+function configurarFormulario(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return; // Si el formulario no existe en la página, se detiene
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        formData.append("access_key", "2c34e170-968c-4687-8be2-903683960213");
+
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Enviando...";
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert("¡Éxito! Tu pedido ha sido enviado correctamente.");
+                form.reset();
+                
+                // Cierra automáticamente el modal al que pertenece este formulario
+                const modal = form.closest('dialog');
+                if (modal) modal.close();
+            } else {
+                alert("Error: " + data.message);
+            }
+
+        } catch (error) {
+            alert("Algo salió mal. Por favor, inténtalo de nuevo.");
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+// Inicializamos ambos formularios de manera independiente
+configurarFormulario('form-fisico');
+configurarFormulario('form-digital');
