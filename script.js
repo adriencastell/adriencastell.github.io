@@ -1,10 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const testimonios = [
-    { cita: "Me gustó muchísimo. Realmente, da para leerlo todo de un tirón.", autor: "Diario X" },
-    { cita: "Impactante novela policial con giros que no verás llegar.", autor: "Editor"},
-    { cita: "Un éxito internacional merecido.", autor: "Crítico Y" },
-    { cita: "La mejor obra que he leído este año.", autor: "Lector Z" }
-];
+    { cita: "Me gustó muchísimo. Realmente, da para leerlo todo de un tirón.", autor: "Valeria Gómez" },
+    { cita: "Impactante novela policial con giros que no verás llegar.", autor: "Mateo Benítez" },
+    { cita: "Un éxito internacional merecido.", autor: "Camila Duarte" },
+    { cita: "La mejor obra que he leído este año.", autor: "Lucas Ríos" },
+    { cita: "Empiezas a leer el primer capítulo y ya no lo puedes soltar hasta el final.", autor: "Sofía Montiel" },
+    { cita: "Tenía las expectativas altas por los comentarios, y aun así logró sorprenderme.", autor: "Daniela Villalba" },
+    { cita: "Una trama negra con un pulso narrativo tremendo y personajes muy reales.", autor: "Carlos Giménez" },
+    { cita: "Hacía tiempo que un libro no me atrapaba tanto de madrugada.", autor: "Mariana Acosta" },
+    { cita: "Imposible adivinar por dónde va a salir el autor. De lo mejor del género este año.", autor: "Esteban Rojas" },
+    { cita: "Te atrapa desde la primera página y te deja pensando mucho después de cerrarlo.", autor: "Javier González" }
+  ];
+
 
 const track = document.getElementById('testimonial-track');
 if (track) {
@@ -77,6 +84,7 @@ function cambiarCapitulo(numCap) {
 
 // Función genérica para manejar cualquier formulario con Web3Forms
 function configurarFormulario(formId) {
+    console.log("1")
     const form = document.getElementById(formId);
     if (!form) return; // Si el formulario no existe en la página, se detiene
 

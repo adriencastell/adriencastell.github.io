@@ -73,8 +73,8 @@
 </section>
 
 
-    <!-- Escritura -->
- <section id="escritura" class="work-showcase">
+<!-- Escritura -->
+<section id="escritura" class="work-showcase">
     <div class="content-wrapper">
         <div class="narrative-block">
             <span class="label">La Historia</span>
@@ -85,29 +85,32 @@
             <p class="book-quote">"Una historia que comenzó en el papel y terminó recorriendo el mundo."</p>
             <p>Acusado de un crimen que no cometió, el detective James Morgan se ve obligado a huir y dejar atrás su antigua vida. En su camino aparece Madelaine, una joven decidida a encontrar a su hermano desaparecido, perseguido por una organización que mueve los hilos desde las sombras.</p>
             
-          <div class="book-actions">
-            
-  <div class="book-actions">
-    <a href="#fisico" class="btn btn-primary" onclick="document.getElementById('modal-fisico').showModal()">
-        <i class="fa-solid fa-book"></i> Comprar Físico
-    </a>
-    <a href="#digital" class="btn btn-secondary" onclick="document.getElementById('modal-digital').showModal()">
-        <i class="fa-solid fa-tablet-screen-button"></i> Comprar Digital
-    </a>
-    <a href="#capitulo1" class="btn btn-ghost" onclick="document.getElementById('modal-lectura').showModal()">
-        <i class="fa-solid fa-book-open-reader"></i> Leer Capítulos Gratis
-    </a>
-    <a href="#librerias" class="btn btn-ghost" onclick="document.getElementById('modal-librerias').showModal()">
-        <i class="fa-solid fa-store"></i> Librerías
-    </a>
-</div>
-</div>
+            <div class="book-actions">
+                <a href="#fisico" class="btn btn-primary" onclick="document.getElementById('modal-fisico').showModal()">
+                    <i class="fa-solid fa-book"></i> Comprar Físico
+                </a>
+                <a href="#digital" class="btn btn-secondary" onclick="document.getElementById('modal-digital').showModal()">
+                    <i class="fa-solid fa-tablet-screen-button"></i> Comprar Digital
+                </a>
+                <a href="#capitulo1" class="btn btn-ghost" onclick="document.getElementById('modal-lectura').showModal()">
+                    <i class="fa-solid fa-book-open-reader"></i> Leer Capítulos Gratis
+                </a>
+                <a href="#librerias" class="btn btn-ghost" onclick="document.getElementById('modal-librerias').showModal()">
+                    <i class="fa-solid fa-store"></i> Librerías
+                </a>
+            </div>
         </div>
+
+        <!-- Elemento visual con la portada y el precio debajo -->
         <div class="visual-element">
             <img src="fractured.png" alt="Portada del libro" class="cover-art">
+            <div class="book-pricing">
+                <span class="price-tag">Gs. 150.000</span>
+                <span class="price-note">Disponible en formato Físico y Digital</span>
+            </div>
         </div>
     </div>
-</section>
+</section>  
 
     <!-- Testimonios -->
 <section id="comentarios" class="testimonials-section">
@@ -131,8 +134,8 @@
             <h2>Hablemos de trabajo</h2>
             <p>¿Tienes una propuesta, una colaboración o simplemente quieres saber más sobre mis proyectos? Estoy disponible para nuevos retos creativos.</p>
             <div class="contact-details">
-    <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> contacto@adriencastell.com</p>
-    <p><i class="fa-solid fa-location-dot"></i> <strong>Ubicación:</strong> Paraguay / Internacional</p>
+    <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> adriencastell995@gmail.com</p>
+    <p><i class="fa-solid fa-location-dot"></i> <strong>Ubicación:</strong> Paraguay</p>
 </div>
         </div>
         
@@ -160,26 +163,26 @@
     </div>
 </details>
     <h3>Detalles de Compra Física</h3>
-    <form method="dialog" action="https://api.web3forms.com/submit" method="POST" id="form-fisico">
+    <form method="POST" action="https://api.web3forms.com/submit" method="POST" id="form-fisico">
 
           <input type="hidden" name="access_key" value="2c34e170-968c-4687-8be2-903683960213">
         <label>Nombre completo</label>
-        <input type="text" required>
+        <input type="text" name="nombre" required>
         
         <label>Ciudad</label>
-        <input type="text" required>
+        <input type="text" name="ciudad" required>
         
         <label>Dirección</label>
-        <input type="text" required>
+        <input type="text" name="direccion" required>
         
         <label>Teléfono</label>
-        <input type="tel" required>
+        <input type="tel" name="telefono" required>
         
         <label>Detalles de entrega</label>
-        <textarea rows="2"></textarea>
+        <textarea name="detalles" rows="2"></textarea>
         
-        <label>Comprobante de pago (Imagen)</label>
-        <input type="file" accept="image/*" required>
+        <label>Numero de Transaccion</label>
+        <input type="text" name="comprobante" required>
         
         <div class="modal-actions">
             <button type="submit" class="btn btn-primary">Enviar Pedido</button>
@@ -200,20 +203,20 @@
 </details>
 
     <h3>Detalles de Compra Digital</h3>
-      <form method="dialog" action="https://api.web3forms.com/submit" method="POST" id="form-digital">
+      <form method="POST" action="https://api.web3forms.com/submit" method="POST" id="form-digital">
 
         <input type="hidden" name="access_key" value="2c34e170-968c-4687-8be2-903683960213">
         <label>Nombre completo</label>
-        <input type="text" required>
+        <input type="text" required name="nombre">
         
         <label>Correo electrónico</label>
-        <input type="email" required>
+        <input type="email" name="email" required>
         
         <label>Teléfono</label>
-        <input type="tel" required>
+        <input type="tel" name="telefono" required>
         
-        <label>Comprobante de pago (Imagen)</label>
-        <input type="file" accept="image/*" required>
+      <label>Numero de Transaccion</label>
+        <input type="text" name="comprobante" required>
         
         <div class="modal-actions">
             <button type="submit" class="btn btn-primary">Enviar Pedido</button>
@@ -573,8 +576,8 @@
         <p>&copy; 2026 Adrien Castell. Todos los derechos reservados.</p>
         <div class="footer-socials">
     <a href="https://instagram.com/tu_usuario" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-    <a href="https://goodreads.com/tu_perfil" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-    <a href="https://imdb.com/name/tu_id" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+    <a href="https://Facebook.com/tu_perfil" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    <a href="https://TikTok/name/tu_id" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
 </div>
     </div>
 </footer>
