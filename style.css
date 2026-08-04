@@ -1,0 +1,619 @@
+/* --- Variables de Diseño --- */
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-alt: #121212;
+    --bg-accent: #1a1a1a;
+    --text-main: #e0e0e0;
+    --text-dim: #888;
+    --accent: #ff4500;
+}
+
+
+@font-face {
+    font-family: 'fractured'; /* Nombre con el que la llamarás después */
+    src: url('JonzeJonzing.woff2') format('woff2'); /* Ruta al archivo */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- Reset --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Navegación --- */
+.navbar { padding: 2rem 10%; display: flex; justify-content: space-between; align-items: center; /* EL CONTRASTE: Fondo oscuro con transparencia y efecto borroso */
+    background: rgb(26, 25, 25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    
+    /* Línea sutil para separarla visualmente del contenido */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    z-index: 1000; /* Asegura que siempre esté por encima de todo */}
+    
+
+
+
+
+    .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px; /* Reducimos un poco el espacio entre botones para que entren mejor */
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem; /* Texto ligeramente más compacto */
+    font-weight: 500;
+    padding: 6px 12px;  /* Relleno más ajustado para móviles */
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto de un botón se divida en dos líneas */
+}
+
+/* Regla especial para celulares pequeños */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 15px; /* Margen simétrico y seguro en los bordes de la pantalla */
+    }
+    
+    .nav-logo {
+        font-size: 1rem; /* Achicamos un poco el logo para ganar espacio vital */
+    }
+    
+    .nav-links {
+        gap: 1px; /* Espacio mínimo para que entren holgados */
+    }
+    
+    .nav-links a {
+        padding: 3px 5px; /* Botones compactos pero totalmente legibles */
+        font-size: 0.78rem;
+    }
+}
+.nav-logo { font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; }
+.nav-links a { color: var(--text-dim); text-decoration: none; margin-left: 2rem; transition: 0.3s; }
+.nav-links a:hover { color: #fff; }
+
+/* --- Estilo de Secciones --- */
+section { padding: 80px 10%; border-bottom: 1px solid #222; display: flow-root; overflow: hidden; }
+
+.about-section { background-color: var(--bg-alt); }
+.work-showcase { background-color: var(--bg-accent); }
+.testimonials-section { background-color: var(--bg-dark); }
+
+.content-wrapper { display: flex; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto; }
+
+/* --- Tipografía --- */
+h2 { font-size: 2.5rem; margin-bottom: 2rem; color: #fff; }
+.label { display: block; color: var(--accent); font-weight: bold; text-transform: uppercase; margin-bottom: 10px; }
+.book-title { font-size: 3rem; margin: 10px 0; font-family: 'fractured', sans-serif; font-weight: normal;}
+.book-quote { font-style: italic; margin-bottom: 1rem; color: var(--text-dim); }
+
+/* --- Botones --- */
+.btn, .btn-primary, .btn-secondary, .btn-ghost {
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px; /* Bordes redondeados */
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: #e63e00; }
+
+.btn-secondary { border-color: var(--accent); color: white; }
+.btn-secondary:hover { background: var(--accent); color: white; }
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--accent); /* Usa tu color naranja de acento */
+    color: var(--accent);
+}
+
+.btn-ghost:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.book-actions { display: flex; flex-wrap: wrap; margin-top: 25px; }
+
+/* --- Elementos Visuales --- */
+.hero-section { min-height: 80vh; display: flex; align-items: center; }
+.hero-content-wrapper { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.hero-text h1 { font-size: 4rem; margin-bottom: 1rem; }
+.hero-text {
+    flex: 1;
+    padding-right: 40px;
+}
+.hero-bio {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin: 1.5rem 0 2rem 0;
+    max-width: 550px;
+    line-height: 1.8;
+}
+@media (max-width: 900px) {
+    .hero-text { padding-right: 0; }
+    .hero-bio { margin-left: auto; margin-right: auto; }
+}
+
+.hero-image-wrapper {
+    /* Asegura que el contenedor no sea más grande que el espacio disponible */
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    /* Clave: Asegura que la imagen sea responsiva y no se desborde */
+    max-width: 100%;
+    height: auto; 
+    display: block;
+    
+    /* Opcional: Esto mantiene el estilo si la imagen es muy alta */
+    object-fit: cover; 
+}
+
+
+.hero-image-wrapper img { width: 350px; border-radius: 10px; }
+.visual-element { flex: 0 0 300px; }
+.cover-art { width: 100%; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+/* --- Responsivo --- */
+@media (max-width: 900px) {
+    .content-wrapper, .hero-content-wrapper { flex-direction: column; text-align: center; }
+    .hero-text h1 { font-size: 2.5rem; }
+    .visual-element { order: -1; }
+    .book-actions { justify-content: center; }
+}
+/* Centrado del modal */
+dialog {
+    /* Centrado absoluto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Límites de tamaño para que nunca se salga de la pantalla */
+    width: 90%;
+    max-width: 450px;
+    max-height: 85vh; /* Impide que sea más alto que la pantalla */
+    
+    /* Gestión del scroll interno */
+   
+    overflow-y: auto; /* Scroll solo si es necesario */
+    
+    /* Estilos visuales */
+    padding: 2rem;
+    border: none;
+    border-radius: 20px;
+    background: #1a1a1a;
+    color: white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Forzar que el scroll sea estético */
+dialog::-webkit-scrollbar { width: 6px; }
+dialog::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+
+/* Asegurar que el fondo (backdrop) cubra toda la pantalla */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+dialog label {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: -5px;
+}
+
+dialog input, dialog textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #0a0a0a;
+    color: white;
+    width: 100%;
+}
+
+dialog .modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+dialog .btn {
+    flex: 1;
+    text-align: center;
+}
+
+.bank-details {
+    background: #111;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid #333;
+    font-size: 0.9rem;
+}
+
+.bank-details summary {
+    font-weight: bold;
+    color: var(--accent);
+    outline: none;
+}
+
+.bank-info {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #222;
+}
+
+dialog h3 { margin-bottom: 1rem; color: var(--accent); }
+dialog input { display: block; width: 100%; margin-bottom: 10px; padding: 10px; }
+
+/* Contenedor del carrusel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Oculta los testimonios que no caben */
+    position: relative;
+    padding: 20px 0;
+}
+
+/* El track que se mueve */
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 30s linear infinite; /* Duración ajustable */
+    width: max-content;
+}
+
+/* Tarjeta del testimonio */
+.testimonial-card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    width: 300px; /* Ancho fijo para cada card */
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+    color: var(--accent);
+    display: block;
+}
+
+.testimonials-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* El carrusel ahora ocupa más espacio (izquierda) */
+.testimonials-layout .carousel-container {
+    flex: 2; /* Ocupa el 66% aprox del ancho */
+}
+
+/* El título ahora ocupa menos espacio (derecha) */
+.testimonials-layout .testimonials-title {
+    flex: 1;
+    text-align: right;
+}
+
+/* Ajuste para móviles: volvemos a apilar todo */
+@media (max-width: 900px) {
+    .testimonials-layout {
+        flex-direction: column-reverse; /* Título queda arriba, carrusel abajo */
+        text-align: center;
+    }
+    .testimonials-layout .testimonials-title {
+        text-align: center;
+    }
+}
+
+
+
+/* Animación de movimiento */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Ajustar según cantidad de elementos */
+}
+
+
+
+/* Layout general de la sección */
+.about-layout {
+    flex-direction: column; /* Apilamos texto arriba y videos abajo */
+    gap: 40px;
+}
+
+/* Grilla de videos */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Contenedor responsivo del iframe */
+.video-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción de cine */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Centrado del botón "Ver más" */
+.about-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para Biografía */
+.bio-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.bio-content p { margin-bottom: 20px; color: #ccc; }
+
+/* Estilos para Contacto */
+.contact-section { background: var(--bg-accent); }
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #0f0f0f;
+    color: white;
+}
+
+.book-editorial {
+    font-size: 0.9rem;
+    color: var(--accent); /* O el color sutil que prefieras */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    opacity: 0.85;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contact-layout { grid-template-columns: 1fr; }
+    .contact-info { text-align: center; }
+}
+
+@media (max-width: 900px) {
+    .content-wrapper, .hero-content-wrapper, .contact-layout {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    
+    /* Evita que los elementos se superpongan si tienen anchos fijos */
+    .hero-text, .about-text, .contact-info, .contact-form {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+}
+
+/* Clase que aplicaremos para el giro */
+.cover-art {
+    transition: transform 0.6s ease-in-out;
+    cursor: pointer;
+    /* Aseguramos que la imagen no se deforme */
+    max-width: 100%; 
+    height: auto;
+}
+
+/* Efecto al rotar (puedes ajustar los grados a 180 o 360) */
+.cover-art.flipped {
+    transform: rotateY(180deg);
+}
+
+.visual-element {
+    perspective: 1000px; /* Esto da profundidad 3D */
+}
+
+.cover-art {
+    transform-style: preserve-3d; /* Mantiene la lógica 3D */
+}
+
+/* Estilo específico para el modal de lectura */
+#modal-capitulo1 {
+    max-width: 600px; /* Un poco más ancho para leer mejor */
+    max-height: 80vh;  /* Evita que ocupe toda la pantalla */
+}
+
+.chapter-content {
+    margin-top: 15px;
+    padding-right: 10px;
+    overflow-y: auto;   /* Scroll solo para el texto del capítulo */
+    max-height: 50vh;   
+    text-align: left;
+}
+
+.chapter-content h4 {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.chapter-content p {
+    margin-bottom: 1rem;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+.site-footer {
+    background: #0a0a0a;
+    border-top: 1px solid #222;
+    padding: 30px 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: var(--accent);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 500px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Añade un pequeño espacio entre el icono y el texto del botón */
+a i, p i {
+    margin-right: 8px;
+}
+
+
+/* Estilos para el selector de capítulos dentro del modal */
+.reader-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.chapter-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-btn {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #888;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: #fff;
+    border-color: #555;
+}
+
+/* Pestaña activa */
+.tab-btn.active {
+    background: var(--accent); /* O el color principal de tus botones */
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* Ocultar capítulos inactivos y mostrar el activo */
+.chapter-pane {
+    display: none;
+}
+
+.chapter-pane.active {
+    display: block;
+}
+
+
+#modal-librerias {
+    max-width: 550px;
+    width: 90%;
+}
+
+.librerias-header {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.librerias-subtitle {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.map-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.librerias-list p {
+    margin-bottom: 8px;
+}

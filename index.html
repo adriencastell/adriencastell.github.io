@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrien Castell | Autor & Actor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <a href="#" class="nav-logo">Adrien Castell</a>
+        <div class="nav-links">
+           
+            <a href="#escritura">Escritura</a>
+            <a href="#sobre-mi">Actuación</a>
+            <a href="#contacto" class="nav-contact">Contacto</a>
+        </div>
+    </nav>
+
+<section class="hero-section">
+    <div class="content-wrapper hero-content-wrapper">
+        <div class="hero-text">
+            <h1>ADRIEN CASTELL</h1>
+            <p class="hero-subtitle">Actor y escritor</p>
+            
+            <!-- Biografía integrada -->
+            <p class="hero-bio">
+                Adrien Castell es una figura multifacética en la escena cultural paraguaya. 
+                Dedicado a explorar la condición humana a través de la narrativa visual y literaria, 
+                su trabajo busca transformar la realidad en historias que resuenan internacionalmente.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#escritura" class="btn btn-primary">Último Libro</a>
+                <a href="#sobre-mi" class="btn btn-secondary">Showreel de Actor</a>
+            </div>
+        </div>
+        
+        <div class="hero-image-wrapper">
+            <img src="ivan.jpg" alt="Adrien Castell" class="hero-image">
+        </div>
+    </div>
+</section>
+
+<section id="sobre-mi" class="about-section">
+    <div class="content-wrapper about-layout">
+        <div class="about-text">
+            <h2>Detrás de la máscara y la pluma</h2>
+            <p class="highlight-text">"También conocido como Adrien Castell, es un escritor paraguayo con una profunda conexión con el cine, la literatura, los videojuegos y el arte."</p>
+            <p>Apasionado por las historias que despiertan emociones reales a través de la ficción, sostiene que cada relato tiene el poder de transformar a quien lo vive y lo experimenta.</p>
+        </div>
+
+        <!-- Galería de Videos -->
+        <div class="video-gallery">
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/ID_VIDEO_1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/ID_VIDEO_2" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/ID_VIDEO_3" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="about-footer">
+            <a href="#" class="btn-secondary">Ver portafolio actoral completo →</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Escritura -->
+ <section id="escritura" class="work-showcase">
+    <div class="content-wrapper">
+        <div class="narrative-block">
+            <span class="label">La Historia</span>
+            <h2 class="book-title">FRACTURED</h2>
+
+            <p class="book-editorial">Publicado por <strong>Thoth Libros</strong></p>
+            
+            <p class="book-quote">"Una historia que comenzó en el papel y terminó recorriendo el mundo."</p>
+            <p>Acusado de un crimen que no cometió, el detective James Morgan se ve obligado a huir y dejar atrás su antigua vida. En su camino aparece Madelaine, una joven decidida a encontrar a su hermano desaparecido, perseguido por una organización que mueve los hilos desde las sombras.</p>
+            
+          <div class="book-actions">
+            
+  <div class="book-actions">
+    <a href="#fisico" class="btn btn-primary" onclick="document.getElementById('modal-fisico').showModal()">
+        <i class="fa-solid fa-book"></i> Comprar Físico
+    </a>
+    <a href="#digital" class="btn btn-secondary" onclick="document.getElementById('modal-digital').showModal()">
+        <i class="fa-solid fa-tablet-screen-button"></i> Comprar Digital
+    </a>
+    <a href="#capitulo1" class="btn btn-ghost" onclick="document.getElementById('modal-lectura').showModal()">
+        <i class="fa-solid fa-book-open-reader"></i> Leer Capítulos Gratis
+    </a>
+    <a href="#librerias" class="btn btn-ghost" onclick="document.getElementById('modal-librerias').showModal()">
+        <i class="fa-solid fa-store"></i> Librerías
+    </a>
+</div>
+</div>
+        </div>
+        <div class="visual-element">
+            <img src="fractured.png" alt="Portada del libro" class="cover-art">
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonios -->
+<section id="comentarios" class="testimonials-section">
+    <div class="content-wrapper testimonials-layout">
+        <!-- Carrusel a la izquierda -->
+        <div class="carousel-container">
+            <div class="carousel-track" id="testimonial-track"></div>
+        </div>
+        
+        <!-- Título a la derecha -->
+        <div class="testimonials-title">
+            <h2>Opinión de los lectores</h2>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Contacto -->
+<section id="contacto" class="contact-section">
+    <div class="content-wrapper contact-layout">
+        <div class="contact-info">
+            <h2>Hablemos de trabajo</h2>
+            <p>¿Tienes una propuesta, una colaboración o simplemente quieres saber más sobre mis proyectos? Estoy disponible para nuevos retos creativos.</p>
+            <div class="contact-details">
+    <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> contacto@adriencastell.com</p>
+    <p><i class="fa-solid fa-location-dot"></i> <strong>Ubicación:</strong> Paraguay / Internacional</p>
+</div>
+        </div>
+        
+        <form class="contact-form">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        </form>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+
+
+
+    <dialog id="modal-fisico">
+        <details class="bank-details">
+    <summary>Ver datos para transferencia ▾</summary>
+    <div class="bank-info">
+        <p><strong>Banco:</strong> Itau</p>
+        <p><strong>Titular:</strong> Ivan Villasanti</p>
+        <p><strong>CI/Alias:</strong> XXXX-XXXX-XXXX</p>
+        <p><strong>Cuenta:</strong> XXXX-XXXX-XXXX</p>
+    </div>
+</details>
+    <h3>Detalles de Compra Física</h3>
+    <form method="dialog">
+        <label>Nombre completo</label>
+        <input type="text" required>
+        
+        <label>Ciudad</label>
+        <input type="text" required>
+        
+        <label>Dirección</label>
+        <input type="text" required>
+        
+        <label>Teléfono</label>
+        <input type="tel" required>
+        
+        <label>Detalles de entrega</label>
+        <textarea rows="2"></textarea>
+        
+        <label>Comprobante de pago (Imagen)</label>
+        <input type="file" accept="image/*" required>
+        
+        <div class="modal-actions">
+            <button type="submit" class="btn btn-primary">Enviar Pedido</button>
+            <button type="button" class="btn btn-ghost" onclick="this.closest('dialog').close()">Cerrar</button>
+        </div>
+    </form>
+</dialog>
+
+<dialog id="modal-digital">
+<details class="bank-details">
+    <summary>Ver datos para transferencia ▾</summary>
+    <div class="bank-info">
+        <p><strong>Banco:</strong> Itau</p>
+        <p><strong>Titular:</strong> Ivan Villasanti</p>
+        <p><strong>CI/Alias:</strong> XXXX-XXXX-XXXX</p>
+        <p><strong>Cuenta:</strong> XXXX-XXXX-XXXX</p>
+    </div>
+</details>
+
+    <h3>Detalles de Compra Digital</h3>
+    <form method="dialog">
+        <label>Nombre completo</label>
+        <input type="text" required>
+        
+        <label>Correo electrónico</label>
+        <input type="email" required>
+        
+        <label>Teléfono</label>
+        <input type="tel" required>
+        
+        <label>Comprobante de pago (Imagen)</label>
+        <input type="file" accept="image/*" required>
+        
+        <div class="modal-actions">
+            <button type="submit" class="btn btn-primary">Enviar Pedido</button>
+            <button type="button" class="btn btn-ghost" onclick="this.closest('dialog').close()">Cerrar</button>
+        </div>
+    </form>
+</dialog>
+
+<dialog id="modal-librerias">
+    <div class="librerias-header">
+        <h3><i class="fa-solid fa-store"></i> Puntos de venta autorizados</h3>
+        <p class="librerias-subtitle">Encuentra FRACTURED en librerías seleccionadas o retira en nuestro punto principal.</p>
+    </div>
+
+    <!-- Contenedor del Mapa de Google Maps -->
+    <div class="map-container">
+        <!-- Reemplaza el src con la URL de inserción de Google Maps de tu ubicación exacta -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10764.953087900643!2d-57.646241631194684!3d-25.288219683035848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da7f66c423731%3A0xf0436ad9c24f7062!2sLibreria%20De%20La%20Paz!5e1!3m2!1ses!2spy!4v1785869570991!5m2!1ses!2spy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+
+    <div class="librerias-list" style="margin: 15px 0; font-size: 0.95rem; color: #ccc; text-align: left;">
+        <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> <strong>Librería de la Paz:</strong> Asunción</p>
+    </div>
+
+    <div class="modal-actions" style="margin-top: 20px; text-align: right;">
+        <button type="button" class="btn btn-ghost" onclick="this.closest('dialog').close()">Cerrar</button>
+    </div>
+</dialog>
+
+
+<dialog id="modal-lectura">
+    <div class="reader-header">
+        <h3>FRACTURED — Lectura en línea</h3>
+        <!-- Botones de selección de capítulo -->
+        <div class="chapter-tabs">
+            <button type="button" class="tab-btn active" onclick="cambiarCapitulo(1)">Capítulo 1</button>
+            <button type="button" class="tab-btn" onclick="cambiarCapitulo(2)">Capítulo 2</button>
+            <button type="button" class="tab-btn" onclick="cambiarCapitulo(3)">Capítulo 3</button>
+                 <button type="button" class="tab-btn" onclick="cambiarCapitulo(4)">Capítulo 4</button>
+        </div>
+    </div>
+    
+    <!-- Contenedor con scroll para los textos -->
+    <div class="chapter-content">
+        <!-- CAPÍTULO 1 -->
+        <div id="cap-1" class="chapter-pane active">
+           <h1>Capítulo 1</h1>
+
+    <p>Cuando estaba por cruzar para llegar a la ruta principal recibió una llamada de su compañero Hoffman.</p>
+    <p>—¿Dónde estás? —le increpó.</p>
+    <p>—Estoy en camino a punto de doblar la calle principal para poder llegar a la oficina.</p>
+    <p>—¿No leíste mis mensajes?</p>
+    <p>—¿Cuáles mensajes?</p>
+    <p>—James, tú… —suspira profundamente—. Sabes, no importa. Mira, tienes que venir a lo de los Johnson rápido, ha ocurrido otra vez.</p>
+    <p>—Tiene que ser una broma. Okey… Voy en camino.</p>
+
+    <p>James lucía algo agitado después de la llamada de Hoffman, pero rápidamente pisó el acelerador.</p>
+
+    <p>Los Johnson eran una pareja de ancianos muy afables, muy carismáticos y bondadosos. El Sr. Johnson era un excombatiente retirado y la Sra. Johnson una profesora cariñosa de una pequeña guardería que se encontraba al otro lado del pueblo.</p>
+
+    <p>Todos los años la pareja participaba de eventos de caridad para apoyar a huérfanos y necesitados. También acostumbraban a realizar regalos para los niños y celebrar sus cumpleaños con ellos; les preparaban comida cada vez que podían, se iban junto a ellos para jugar, leer libros y hacer largas caminatas por el parque.</p>
+
+    <p>No era un secreto a voces para nadie que quizás uno de los motivos por el cual los Johnson tenían un gran interés en los niños era debido a que años atrás la pareja había perdido a su único hijo en un accidente automovilístico, y fue un suceso tan desgarrador para ellos que decidieron dedicar sus energías de manera positiva y procurar de retribuir un poco de ese amor que tenían por su hijo.</p>
+
+    <p>James suspira ligeramente agitado.</p>
+    <p>—Joder, por favor no, ellos no.</p>
+
+    <p>La casa era antigua; probablemente se había construido antes de la primera guerra mundial. Vio a lo lejos dos patrullas. Una de ellas pertenecía a Hoffman y otra a su jefe Jaime Kidman, un hombre frío pero con un sentido del deber como ningún otro, alto, cabello dorado, ojos azules, siempre elegante sin importar el momento del día. Mas la presencia de su jefe era un mal augurio; donde fuera su jefe había problemas.</p>
+
+    <p>James se bajó de su jeep, se acercó a la casa, se fijó en que la puerta principal estaba parcialmente abierta, no logró ver a nadie. Sacó su revolver por las dudas, una clásica Smith &amp; Wesson Modelo 29 de cañón largo. Lo primero que nota es que la casa está hecha un desastre: la sala totalmente desordenada, las sillas rotas, el televisor destruido y reducido a trozos; las viejas fotografías que solían estar colgadas en la pared acumuladas en una esquina. James se acercó para verlas. Se percató de que todas las fotografías estaban marcadas con símbolos satánicos y cruces gigantes en los rostros de los Johnson.</p>
+
+    <p>—Dios… —replicó James—. ¡Hola! ¿Hay alguien aquí?</p>
+    <p>—¡James! Estamos arriba —dice Hoffman.</p>
+    <p>James se apresuró a subir las escaleras.</p>
+    <p>—Oh no… —se detiene unos momentos al darse cuenta de algo—. ¡Sangre! No, no, no.</p>
+    <p>—¡James, ven! —dice Hoffman.</p>
+
+    <p>James llegó a la habitación de los Johnson junto al sargento Kidman y Hoffman.</p>
+    <p>—¡Oh, Dios mío! ¡Ellos no! —dice alterado.</p>
+    <p>—Tranquilo, amigo, tranquilo —Hoffman intenta tranquilizarlo—. Estoy contigo. Los Johnson… fueron degollados y desollados a sangre fría. Estaban atados en sus camas, uno al lado del otro, pero había heridas en las manos y en los pies, lo que daba claros indicios de que había habido forcejeo y de que el perpetrador había esperado a que estuvieran a punto de dormir para cometer su crimen.</p>
+
+    <p>La escena era horrible, muy desconcertante para todos y sobre todo muy personal, porque a pesar de que la casa estaba destruida, a simple vista no parecía que hubieran intentado robar.</p>
+
+    <p>James recuperó un poco la compostura. Se acercó al cuerpo de la pareja, empezó a lagrimear, pero escondió sus lágrimas para que no pudieran verlo.</p>
+
+    <p>Sus ojos estaban abiertos, casi como si el asesino quisiera que ellos supieran lo que estaban a punto de sufrir en sus últimos instantes. James cerró los ojos de ambos.</p>
+
+    <p>—James, ven conmigo, vamos por un café —dijo Hoffman.</p>
+    <p>Pero él no prestó atención a lo que le decía. Se alejó de la escena del crimen con la mirada pálida y cabizbajo.</p>
+    <p>—¡James! ¡James! —dijo Hoffman.</p>
+    <p>—Déjalo —replicó Kidman.</p>
+    <p>—Pero, señor debo de…</p>
+    <p>—He dicho déjalo.</p>
+    <p>—Entiendo, sargento.</p>
+    <p>—Eh, señor… —dijo casi titubeando.</p>
+    <p>—Sabes que puedes llamarme por mi apellido, Hoffman.</p>
+    <p>—Sí, lo sé, se... digo Kidman. Debería de comentarle a James sobre la carta.</p>
+    <p>—No, no lo haremos, y no le comentarás nada al respecto.</p>
+    <p>—Pero, señor…</p>
+    <p>—Te he dado una orden, Hoffman.</p>
+    <p>—Entiendo, sargento.</p>
+
+    <p>Kidman guardó la carta en su abrigo.</p>
+
+    <p>James se dirigió ensimismado a su coche. Llovía despacio. Suspiró profundamente y aceleró con toda prisa a descargarse en el único lugar que conocía: detrás de una botella de cerveza.</p>
+        </div>
+
+        <!-- CAPÍTULO 2 -->
+        <div id="cap-2" class="chapter-pane">
+        <h1>Capítulo 2</h1>
+
+    <p>—¡Sam! ¡Sam! ¿Dónde estás? —James se agita y corre apresuradamente hacia la puerta de la habitación.</p>
+    <p>—¡Está atorada! —Empieza a empujar con fuerza, logrando derribarla.</p>
+    <p>—¡Sam! ¡Sam! ¿Dónde estás?</p>
+    <p>James no logra ver nada del humo.</p>
+    <p>—¡Papá! ¡Papá! ¡Estoy aquí!</p>
+    <p>—¡Sam! ¡Sam! ¡Aguarda un poco! ¡Ya estoy contigo! —James procura atravesar la habitación con el espeso humo. Se tropieza con los juguetes de Sam.</p>
+    <p>Empieza a ver una sombra cerca.</p>
+    <p>—¡Sam! ¡Oh, Sam! ¡Papá está aquí! ¡Larguémonos de aquí! —dice, abrazándolo—. Oh, Sam, ven con papá. ¡SAM! —grita agitado James.</p>
+
+    <p>Sam se quema vivo, quedando totalmente desfigurado.</p>
+    <p>—¡Oh, no! —su voz suena desgarrada, como si le saliera el alma por la boca—. ¡Sam, no, por favor, no!</p>
+
+    <p>James se despierta súbitamente sobre la mesa.</p>
+    <p>Al despertarse casi rompe una de las botellas de cerveza que estaba tomando. Está agitado. Alguien parece estar acercándose junto a él.</p>
+    <p>—Joder, otra vez, otra vez la pesadilla —susurra para sí.</p>
+    <p>—¡Hola, James! ¿Cómo estás? —dice una voz.</p>
+    <p>—¡Oh, hola, ehh! ¿Parker, cierto?</p>
+    <p>—No, Petersen.</p>
+    <p>—Oh, cierto, discúlpame, soy malo con los nombres.</p>
+    <p>—No te preocupes, James. Suelen confundirme a menudo —ríe Petersen.</p>
+    <p>—Gracias. ¿A qué se debe que estás en el bar a estas horas, Petersen?</p>
+    <p>—Oh, nada en particular, solo he venido a descansar un ratito del ajetreo de la oficina.</p>
+    <p>—Venga ya. ¿Te han dicho para que me eches un ojo, cierto?</p>
+    <p>—Bueno… —titubea casi imperceptiblemente.</p>
+    <p>—No hace falta que me lo digas, muchacho.</p>
+
+    <p>Petersen suspira.</p>
+    <p>—Me alegra saber que ya no tendré que montar un número para fingir con usted, detective —menciona.</p>
+    <p>—Sí, bueno, no te culpo, he tenido días… Bueno, disculpa mis modales. Por favor siéntate —invita—. ¿Quieres algo de comer?</p>
+    <p>—No, gracias, no tengo hambre.</p>
+    <p>—Venga ya, no te me hagas del tibio. Se te nota en la cara que tienes hambre, ¿qué te gustaría comer?</p>
+    <p>—Pues he oído que la hamburguesa doble cheddar con bacon es muy rica.</p>
+    <p>—Estupendo, unas hamburguesas serán.</p>
+
+    <p>—¡Mathew! Ven, queremos ordenar comida —dice James.</p>
+    <p>Mathew es el encargado del bar donde los muchachos suelen reunirse casi todos los días a divertirse después de un día complicado, o solo para matar el aburrimiento.</p>
+
+    <p>—¡James! ¿En qué puedo serte de ayuda?</p>
+    <p>—Quiero dos hamburguesas, por favor.</p>
+    <p>—Por supuesto, en camino. ¿Alguna bebida?</p>
+    <p>—Sí, unas cer… mejor unas gaseosas.</p>
+    <p>—¡Perfecto! En un ratito les traigo su pedido.</p>
+
+    <p>—Entonces dime, Petersen, ¿actualmente en qué estás trabajando?</p>
+    <p>—Me han asignado a trabajar con una compañera nueva, una forense.</p>
+    <p>—Oh, vaya, entiendo.</p>
+    <p>—No me malinterpretes, James, ella es muy agradable y muy trabajadora con todo lo que hace—. ¿Qué hay de ti, James? Has estado algo ocupado por lo que me han contado.</p>
+    <p>—Bueno, no lo diría de esa manera —murmura James.</p>
+    <p>—Oh, por favor, no quiero que me tomes por un fanfarrón por esto. Sí, he estado ocupado con este caso del asesino en serie que investigamos con Hoffman.</p>
+    <p>—Claro, comprendo —dice—. Eso me han mencionado, ¿y qué tal les va?</p>
+    <p>—Pues para ser honestos, no hemos sido capaces de reunir mucha información en estos días.</p>
+    <p>—Entiendo. Escuché… —habla Petersen, dudando.</p>
+    <p>—¿Escuchaste acerca de qué? —suena rudo James.</p>
+    <p>—Me he enterado acerca de lo ocurrido con los Johnson, lo siento mu…</p>
+    <p>—Sabes, Petersen —cambia rápido de tema—. ¿Alguna vez te has puesto a pensar si te gusta tu trabajo?</p>
+    <p>—¿Si me gusta mi trabajo? —suena extrañado—. Sí claro, me encanta mi trabajo y lo que hago, ¿por qué no lo haría?</p>
+    <p>—Me alegro de escuchar eso.</p>
+    <p>—¿Por qué la pregunta, James?</p>
+    <p>—Por nada en particular.</p>
+    <p>—Bueno, a mí me parece que…</p>
+
+    <p>Son interrumpidos por Matthew trayendo consigo las hamburguesas.</p>
+    <p>—¡Bueno, no se diga más! —dice James, ansioso y hambriento—. Buen provecho, Petersen.</p>
+    <p>—Buen provecho, James.</p>
+
+    <p>Los dos pasaron un momento incómodo y sin decir nada. Una vez que terminaron de comer, Petersen se ofreció a llevarlo a su casa. Agradecieron la comida a Mathew y se marcharon apaciblemente.</p>
+        </div>
+
+        <!-- CAPÍTULO 3 -->
+        <div id="cap-3" class="chapter-pane">
+            <h1>Capítulo 3</h1>
+
+    <p>A la mañana siguiente James ya se sentía un poco mejor. Llegó solo 40 minutos tarde a la comisaría y no tan desarreglado, lo que podría considerarse como un día prometedor.</p>
+
+    <p>Se ubicó y estaba a punto de ponerse a revisar sus correos pendientes cuando se detiene por un instante. Empezó a ver fotos viejas de sus condecoraciones, de su época cuando era cadete. Añoraba esos momentos cuando la vida parecía más sencilla, menos atareada y preocupada.</p>
+
+    <p>Suspiró unos instantes en la comodidad de su soledad.</p>
+
+    <p>Finalmente, dirigió su mirada al lado derecho de su escritorio. Al lado de su interminable papeleo se encontraba un retrato pequeño y algo descuidado de madera; en él estaban James, una mujer y un niño.</p>
+
+    <p>Eran su esposa e hijo.</p>
+
+    <p>James contempló por unos segundos el retrato. Su mirada parecía perdida, casi ensimismada en su propia melancolía. Decidió agarrar el retrato y esconderlo en la gaveta de su escritorio.</p>
+
+    <p>—Hoy no será el día —dice para sí—. Bueno, terminemos este día de una buena vez. Veamos estos correos viejos.</p>
+
+    <h3>Solicitud de licencia de vacaciones, Ramsey Sunderland</h3>
+    <p>“Buenos días estimados, espero que este correo los encuentre muy bien.</p>
+    <p>Por este medio solicito mi pedido de licencia desde el 19/04 hasta el 02/05 por motivo de que saldré de luna de miel con mi señora” y lo que parecía ser el emoji de una cara amarilla sonriente con una gota debajo de su ceja.</p>
+
+    <p>Hmmmm, estos jóvenes tan sueltos y despreocupados.</p>
+
+    <p>Veamos otro correo…</p>
+
+    <h3>CORREO SECRETO NO DIFUNDIR. Fiesta para Jack</h3>
+    <p>Hola, compañeros, espero que estén todos muy bien.</p>
+    <p>Me gustaría que nos pusiéramos de acuerdo para decidir donde estaremos realizando la fiesta sorpresa para Sykes.</p>
+    <p>He estado pensando en Walter’s bar o podría ser en lo de los pequeños Johns.</p>
+    <p>Ah, y no menos importante, favor darme el dinero a más tardar el viernes por la tarde”.</p>
+    <p>¡Saludos cordiales!<br>
+    Alice y una carita feliz redonda.</p>
+
+    <p>Tiene que ser una broma, en serio menciona “en lo de los pequeños Johns”.</p>
+
+    <p>—Ah —suspiró de nuevo James. Bueno, veamos cuántos correos más me faltan. A ver: 37.</p>
+
+    <p>Esto de los correos es una jodida pérdida de tiempo, creo que he tenido suficiente por hoy, mejor me voy a dar una vuelta.</p>
+
+    <p>James se levantó de su escritorio, bloqueó su equipo y se dirigió a la cocina.</p>
+
+    <p>Usualmente James saludaba a todo el mundo, o al menos a aquellos que conocía, pero esta mañana se había levantado con ganas de no saludar a nadie, así que decidió llevar un periódico de su oficina para pretender que lo estaba leyendo y así evitar saludar a los demás.</p>
+
+    <p>Cuando llegó a la cocina se preparó un café negro. Últimamente había estado tomando solamente eso. Revuelvió la taza por un ratito y listo, ya estaba hecho. James tomó un sorbo.</p>
+
+    <p>—Ah, esto es vida —suspiró James.</p>
+    <p>—¡Ey, James! ¿Cómo estás?</p>
+    <p>—Hola Hoffman, mucho mejor.</p>
+    <p>—Me alegro.</p>
+    <p>—Sabes qué suerte que te encuentro, me preguntaba si estarías interesado en ir con los muchachos a jugar bolos, ya sabes, con Richard, Luke y los pequeños Johns. Podemos comer unas hamburguesas y tomar unas cervezas, ¿qué dices?</p>
+    <p>—Suena muy bien, Hoffman —respondió él—, pero creo que por ahora ya he salido suficiente por un tiempo, de todas formas agradezco la invitación.</p>
+    <p>—Oh, entiendo, no pasa nada, si cambias de parecer sabes dónde encontrarme.</p>
+
+    <p>Bueno, eso fue muy amable de su parte, pero creo que en otro momento será.</p>
+
+    <p>James regresó a su oficina y cerró la puerta para tener un poco de privacidad.</p>
+
+    <p>Creo que ya he tenido suficiente interacción con personas por un día.</p>
+
+    <p>James se acercó a su escritorio, vio un sobre con el símbolo de un sinsonte integrado y decidió abrirlo de inmediato.</p>
+
+    <blockquote>
+        <p>James</p>
+        <p>Su vida corre peligro, por favor no confíe en ninguno de sus compañeros y amigos.</p>
+        <p>Le reitero, no confíe en nadie por favor.</p>
+        <p>Sé que no me conoce, pero le imploro que tenga en cuenta mis palabras.</p>
+        <p>CUÍDESE Y NO CONFÍE EN NADIE.</p>
+        <p>Le sugiero que investigue a sus amigos más cercanos, ellos no son quienes dicen ser.</p>
+        <p>Pronto llegará el momento para que nos conozcamos formalmente.</p>
+        <p>Hasta pronto.</p>
+        <p><strong>M.</strong></p>
+    </blockquote>
+
+    <p>—¿Pero qué cojones? —dice en voz baja—. ¿Quién coño es esta persona, y qué es eso de que no puedo confiar en nadie?</p>
+    <p>¿Hoffman sabe algo de esto?</p>
+    <p>¿Será esta otra broma pesada de los muchachos?</p>
+
+    <p>James suspiró durante unos momentos.</p>
+
+    <p>Creo que lo mejor que puedo hacer sería averiguar un poco más antes de descartar la posibilidad de que sea una broma.</p>
+
+    <p>Tendré que irme junto a los muchachos esta noche para averiguar un poco más.</p>
+        </div>
+          <div id="cap-4" class="chapter-pane">
+              <h1>Capítulo 4</h1>
+           <p>James se dirigió a su habitación, inquieto, como si estuviera buscando algo. Desordenó su habitación cual remolino azota con su viento las brisas mañaneras.</p>
+    <p>—Ah, ¿dónde lo habré dejado? Sé que lo guardé por aquí —murmuró James—. Recuerdo que la última vez lo había dejado debajo de este mueble.</p>
+    <p>Creo que, si no me falla la memoria, fue aquella vez que estaba trabajando en el caso de secuestro en navidad con Hoffman. Ese día lo había utilizado cuando tuve que ir de encubierto en el motel cerca de Cauldronlake.</p>
+
+    <hr>
+
+    <p>Era un día nevado. Hacía mucho frío, casi podíamos sentir que el frío helado nos perforaba la piel como si fuera una cuchilla sobre nuestros abrigos de terciopelo.</p>
+    <p>Ese momento fue muy satisfactorio para mí, pero a la vez bastante raro.</p>
+    <p>Cuando llegué al motel percibí sentimientos extraños, como si me estuvieran viendo, pero no había nadie en el salón principal aparte de mí y de la recepcionista.</p>
+    <p>Pedí las llaves de la habitación 413, tal cual como nos había informado nuestro informante que debíamos de pedir.</p>
+    <p>Una vez que me dieron las llaves me dirigí a la habitación en el cuarto piso. Aún recuerdo la mala espina que me provocaba el ascensor; era viejo, metálico, frío y hasta diría que se podía oler el olor al oxido añejado como si el propio metal del que estaba hecho se estuviera pudriendo hacía mucho, y sin mencionar que una vez que te subías al ascensor y presionabas el botón del piso al que querías ir, las puertas se cerraban. Sin embargo, se quedaban atascadas por la mitad, volviéndose a abrir en varias ocasiones y cerrarse al menos tres o cuatro veces. En la quinta ocasión se cerraba por completo para que pudiera subirme.</p>
+    <p>Una vez frente a la puerta 413, totalmente descuidada y hecha añicos por el paso del tiempo, como si la hubieran descuidado a propósito, metí la llave en la manija y la madera de roble de la cual estaba hecha la puerta, que tenía claros indicios de que se estaba empezando a pudrir, hizo un “cruck” como si se estuviera retorciendo por el mero hecho de querer abrirla.</p>
+    <p>Entré en esa habitación con olor a madera húmeda. Los muebles no se quedaban atrás; húmedos y con claros signos de putrefacción. Sobre todo no olvidaré la mesa de escritorio al lado de la cama, totalmente rasguñada, con manchas de lo que parecía sangre impregnada desde hacía un tiempo. Pero eso no era lo más repugnante: en la esquina superior derecha de la mesa había restos de semen fresco que perduraron en el tiempo.</p>
+    <p>Y no me quiero olvidar del baño, ¡joder! Ese baño era horrible de cojones. Completamente devorado por el moho que tenía las paredes, las toallas estaban completamente sucias y eran imposibles de usar sin que corrieras el riesgo de pescar una infección en el proceso. La canilla sacaba agua negra. Definitivamente esa habitación era grotesca en todos los sentidos.</p>
+
+    <p>Me puse manos a la obra, preparé los micrófonos y las cámaras para instalarlos; no tenía mucho tiempo, solamente tenía una hora antes de que viniera el sospechoso tal y cual como nos lo habían indicado. Cuando por fin culminé la instalación, lo terminé con solo unos minutos de margen. Me aseguré de no haber dejado ninguna pista para que el sospechoso no desconfiara.</p>
+    <p>Nos quedamos en la habitación de al lado por cualquier duda para actuar rápido en caso de que se presentara una situación. Ya eran las 19:00 h. En cualquier momento debería de estar llegando nuestra superestrella para que nos deslumbrara con su encanto.</p>
+    <p>—¿Tú crees que nuestro informante nos haya dado las direcciones correctas? —preguntó Hoffman.</p>
+    <p>—No sabría decirte, Hoffman. Solo espero poder acabar con esto para irnos al bar de Mathew de una buena vez.</p>
+    <p>Empecé a caminar por la habitación, esperando a que el invitado llegara para salvarlo de su aburrimiento.</p>
+    <p>—Por favor, viejo —dije—. En breve seguro muerde el anzuelo. Calmaos, seguramente estará por llegar.</p>
+    <p>Eran las 19:30 y aún no había señales del sospechoso. Yo estaba por perder los estribos.</p>
+    <p>—¿Escuchas eso? —repliqué—. Parece que alguien por fin está tratando de abrir la habitación. Creo que es nuestra estrella.</p>
+    <p>Detectamos sonidos de una maleta abriéndose más ruidos incomprensibles.</p>
+    <p>—Parece que está poniendo una especie de casetera —dice Hoffman.</p>
+    <p>Se escucharon más sonidos.</p>
+    <p>—¿Escuchas eso, James?</p>
+    <p>—Son… son gemidos. —Dios, qué infeliz.</p>
+
+    <blockquote>
+        <p>“Ahhhhh, esa chica sí que se movía bien, dios”.</p>
+        <p>“Su piel era tan suave. Si tan solo se hubiera callado un poco más hubiera sido perfecta”.</p>
+    </blockquote>
+
+    <p>—Hijo de perra, es un malnacido —dije.</p>
+    <p>—Tranquilo, viejo, necesitamos que diga más para que podamos proceder.</p>
+
+    <blockquote>
+        <p>“Oh, casi me olvido, debí haber guardado el dedo de la niña en este frasco. ¡Aja, aquí estabas escondido! Es hora de colocarlo en mi colección”.</p>
+        <p>“Veamos, creo que por el tamaño no creo que me entre como debe de ser. Voy a cortarlo un poco”.</p>
+    </blockquote>
+
+    <p>Sonidos de corte.</p>
+
+    <blockquote>
+        <p>“¡WALLAH! Ahora sí debe de caber”.</p>
+    </blockquote>
+
+    <p>Se escuchó el ruido de un bisturí realizando un procedimiento. 
+    <blockquote>
+        <p>“LISTO. ¡Me ha quedado genial! Solo me hace falta una niña más y ya lo tendré listo”.</p>
+    </blockquote>
+
+    <p>—¡Qué hijo de puta! —dije exaltado— ¡Voy por él!</p>
+    <p>—¡No, James, espera! ¡Necesitamos más información para saber dónde están los cuerpos!</p>
+
+    <p>Abrí con rudeza la puerta del 413.</p>
+    <p>—¿Quién eres tú? —gritó el criminal.</p>
+    <p>—¡Yo soy tu DOLOR!</p>
+    <p>Inició el forcejeo. La mesa tembló. Siguió el forcejeo intenso.</p>
+    <p>—¡No, basta por favor!</p>
+    <p>—¿Para esto los usabas? ¿Para crear una horrible mano con los restos de las demás piezas? ¡Eres lo peor!</p>
+    <p>Se rompió la cama y los muebles donde se habían dejado los micrófonos.</p>
+    <p>—Piedad, ¡por favor! —imploraba el criminal.</p>
+    <p>—¡No! No hasta que te destroce por lo que le hiciste a esas niñas —agarré la estaca de una de las sillas rotas.</p>
+    <p>—¡Espero que esta te guste!</p>
+    <p>—¡No, por favor no! ¡Se lo imploro!</p>
+
+    <p>Me acerqué al sospechoso y cuando estaba a punto de cometer un crimen fui detenido por Hoffman.</p>
+    <p>—¡James, ya basta! ¡Esta no es la manera de actuar! —me ordenó agitado.</p>
+    <p>Titubeé unos segundos, me detuve y lo solté. El tío estaba hecho polvo. Apenas se pudo notar su rostro por los moretones. Finalmente, después de unos interrogatorios hice confesar al sospechoso la ubicación de los cuerpos de las niñas desaparecidas. Pero mi actuación en dicha investigación no fue la correcta, y mi jefe me llamó la atención por ello.</p>
+
+    <p>James se quedó quieto unos segundos mirando a la nada, cuando recordó. Fue al ático, abrió una compuerta y buscó una caja en la que se encontraban los codiciados micrófonos.</p>
+    <p>—Okey, les daré un buen uso a estos bebés esta noche.</p>
+        </div>
+    </div>
+
+    <div class="modal-actions" style="margin-top: 20px;">
+        <button type="button" class="btn btn-primary" onclick="document.getElementById('modal-fisico').showModal(); document.getElementById('modal-lectura').close();">Comprar el libro completo</button>
+        <button type="button" class="btn btn-ghost" onclick="this.closest('dialog').close()">Cerrar</button>
+    </div>
+</dialog>
+
+
+
+</body>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="content-wrapper footer-content">    
+        <p>&copy; 2026 Adrien Castell. Todos los derechos reservados.</p>
+        <div class="footer-socials">
+    <a href="https://instagram.com/tu_usuario" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    <a href="https://goodreads.com/tu_perfil" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    <a href="https://imdb.com/name/tu_id" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+</div>
+    </div>
+</footer>
+</html>
